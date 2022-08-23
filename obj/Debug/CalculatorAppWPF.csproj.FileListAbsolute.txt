@@ -1,0 +1,16 @@
+C:\Users\theav\source\repos\CalculatorAppWPF\bin\Debug\CalculatorAppWPF.exe.config
+C:\Users\theav\source\repos\CalculatorAppWPF\bin\Debug\CalculatorAppWPF.exe
+C:\Users\theav\source\repos\CalculatorAppWPF\bin\Debug\CalculatorAppWPF.pdb
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.csproj.AssemblyReference.cache
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.csproj.SuggestedBindingRedirects.cache
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\MainWindow.g.cs
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\App.g.cs
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF_MarkupCompile.cache
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF_MarkupCompile.lref
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\MainWindow.baml
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.g.resources
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.Properties.Resources.resources
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.csproj.GenerateResource.cache
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.csproj.CoreCompileInputs.cache
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.exe
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.pdb
