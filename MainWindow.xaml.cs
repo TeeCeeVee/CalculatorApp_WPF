@@ -41,27 +41,39 @@ namespace CalculatorAppWPF
                 switch (selectedOperator)
                 {
                     case SelectedOperator.Addition:
+                        result = SimpleMath.Add(lastNumber, newNumber);
                         break;
                     case SelectedOperator.Subtraction:
+                        result = SimpleMath.Subtract(lastNumber, newNumber);
                         break;
                     case SelectedOperator.Multiplication:
+                        result = SimpleMath.Multiply(lastNumber, newNumber);
                         break;
                     case SelectedOperator.Division:
+                        result = SimpleMath.Divide(lastNumber, newNumber);
                         break;
                     default:
 
                         break;
                 }
+                resultLabel.Content = result.ToString();
             }
         }
 
         private void PercentageButton_Click(object sender, RoutedEventArgs e)
         {
+            double tempNumber;
+
             // tryparse will evaluate whether its valid entry
-            if (double.TryParse((string)resultLabel.Content, out lastNumber))
+            if (double.TryParse((string)resultLabel.Content, out tempNumber))
             {
-                lastNumber = lastNumber / 100;
-                resultLabel.Content = lastNumber.ToString();
+                tempNumber = tempNumber / 100 ;
+                if (lastNumber != 0)
+                {
+                    tempNumber *= lastNumber;
+                    resultLabel.Content = tempNumber.ToString();
+
+                }
             }
         }
 
@@ -89,6 +101,7 @@ namespace CalculatorAppWPF
             
             if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
+
                 resultLabel.Content = "0";
             }
         }
@@ -136,9 +149,25 @@ namespace CalculatorAppWPF
             }
         }
 
+        private void dotButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (resultLabel.Content.ToString().Contains("."))
+            {
+                //do nothing
+            }
+            else
+            {
+                resultLabel.Content = $"{resultLabel.Content}.";
+            }
+
+        }
+
         private void AcButton_Click(object sender, RoutedEventArgs e)
         {
+            
             resultLabel.Content = "0";
+            result = 0;
+            lastNumber = 0;
         }
     }
 
@@ -149,4 +178,33 @@ namespace CalculatorAppWPF
         Multiplication,
         Division,
     }
+
+    public class SimpleMath
+    {
+        public static double Add(double n1, double n2)
+        {
+            return n1 + n2;
+        }
+
+        public static double Subtract(double n1, double n2)
+        {
+            return n1 - n2;
+        }
+
+        public static double Multiply(double n1, double n2)
+        {
+            return n1 * n2;
+        }
+
+        public static double Divide(double n1, double n2)
+        {
+            if (n2 == 0)
+            {
+                MessageBox.Show("You cannot divide by zero", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+            }
+            return n1 / n2;
+        }
+    }
+
 }
