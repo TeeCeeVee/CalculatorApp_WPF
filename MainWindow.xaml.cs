@@ -20,9 +20,47 @@ namespace CalculatorAppWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        double lastNumber, result;
         public MainWindow()
         {
             InitializeComponent();
+
+            //create event handlers
+            acButton.Click += AcButton_Click;
+            negativeButton.Click += NegativeButton_Click;
+            percentageButton.Click += PercentageButton_Click;
+            equalButton.Click += EqualButton_Click;
+        }
+
+        private void EqualButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PercentageButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse((string)resultLabel.Content, out lastNumber))
+            {
+                lastNumber = lastNumber / 100;
+                resultLabel.Content = lastNumber.ToString();
+            }
+ 
+ 
+        }
+
+        private void NegativeButton_Click(object sender, RoutedEventArgs e)
+        {
+            // needs to convert from object to string to double, if its true, value will be stored in lastNumber
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            {
+                lastNumber = lastNumber * -1;
+                resultLabel.Content = lastNumber.ToString();
+            }
+        }
+
+        private void AcButton_Click(object sender, RoutedEventArgs e)
+        {
+            resultLabel.Content = "0";
         }
     }
 }
