@@ -14,3 +14,4 @@ C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.csproj.G
 C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.csproj.CoreCompileInputs.cache
 C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.exe
 C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\CalculatorAppWPF.pdb
+C:\Users\theav\source\repos\CalculatorAppWPF\obj\Debug\App.baml

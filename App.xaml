@@ -4,6 +4,48 @@
              xmlns:local="clr-namespace:CalculatorAppWPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--<SolidColorBrush x:Key="numbersColor" Color="DarkSlateGray"/>-->
+        <!--<SolidColorBrush x:Key="operationsColor" Color="Orange"/>-->
+
+        <!--style all the buttons with foreground white-->
+        
+        <!--implicit styling-->
+        
+        <!--<Style TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>-->
+
+        <!--explicit styling numbersButton-->
+        <Style TargetType="Button" x:Key="numberButtonsStyle">
+            <Setter Property="Background" Value="DarkSlateGray"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        
+        <!--explicit styling operationButton-->
+        <Style TargetType="Button" x:Key="operationButtonsStyle" BasedOn="{StaticResource numberButtonsStyle}">
+            <Setter Property="Background" Value="Orange"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        
+        <!--explicit styling additionalButtons-->
+        <Style TargetType="Button" x:Key="additionalButtonsStyle" BasedOn="{StaticResource numberButtonsStyle}">
+            <Setter Property="Background" Value="DarkGray"/>
+
+        </Style>
+        
+        
+        
+        
+       <!--label styling-->
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="60"/>
+        </Style>
+
+
+
     </Application.Resources>
 </Application>

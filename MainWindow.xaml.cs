@@ -27,6 +27,7 @@ namespace CalculatorAppWPF
             InitializeComponent();
 
             //create event handlers
+            //performs actions
             acButton.Click += AcButton_Click;
             negativeButton.Click += NegativeButton_Click;
             percentageButton.Click += PercentageButton_Click;
